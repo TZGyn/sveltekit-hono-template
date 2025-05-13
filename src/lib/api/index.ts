@@ -26,7 +26,9 @@ app.get(
 			},
 			servers: [
 				{
-					url: Bun.env.APP_URL ? Bun.env.APP_URL + '/api' : 'http://localhost:5173/api',
+					url: Bun.env.APP_URL
+						? 'https://' + Bun.env.APP_URL + '/api'
+						: 'http://localhost:5173/api',
 					description: 'Server'
 				}
 			]
